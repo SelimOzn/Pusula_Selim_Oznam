@@ -45,7 +45,7 @@ def preprocessing():
     mask = df.groupby(["HastaNo", "TedaviAdi", "TedaviSuresi_num"])["Tanilar"].transform("nunique") > 0
     df_conflict = df[mask].drop_duplicates(subset=["HastaNo", "TedaviAdi", "TedaviSuresi_num", "Tanilar"])
 
-    # Sayısal ve string sütunlara göre farklı agg fonksiyonu
+    # Sayısal ve string sütunlara göre farklı agg fonksiyonu. Groupby'da kullanılan sütunlar dışarıda bırakılıyor.
     numeric_cols = df.select_dtypes(include='number').columns.difference(["HastaNo"])
     string_cols = df.select_dtypes(include='object').columns.difference(["TedaviAdi"])
     agg_dict = {col: 'mean' for col in numeric_cols}

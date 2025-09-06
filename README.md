@@ -1,4 +1,4 @@
-# Pusula_Selim_Oznam
+## Selim Öznam slm3734@outlook.com
 # Fiziksel Rehabilitasyon Veri Analizi ve Ön İşleme
 
 ## 1. Proje Genel Bakışı
